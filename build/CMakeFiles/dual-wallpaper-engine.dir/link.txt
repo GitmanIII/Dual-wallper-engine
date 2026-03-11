@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/dual-wallpaper-engine.dir/src/main.cpp.o" "CMakeFiles/dual-wallpaper-engine.dir/src/monitors.cpp.o" "CMakeFiles/dual-wallpaper-engine.dir/src/composer.cpp.o" "CMakeFiles/dual-wallpaper-engine.dir/include/stb_impl.cpp.o" -o dual-wallpaper-engine 
