@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Dual Wallpaper Engine
+Comment=Set distinct wallpapers for each monitor
+Exec=dual-wallpaper-engine-gui
+Icon=preferences-desktop-wallpaper
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+StartupWMClass=com.github.dualwallpaperengine

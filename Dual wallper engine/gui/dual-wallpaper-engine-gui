@@ -1,0 +1,3 @@
+#!/bin/bash
+# Launcher script for Dual Wallpaper Engine GUI
+python3 /usr/share/dual-wallpaper-engine/app.py "$@"

@@ -1,0 +1,4 @@
+/usr/bin/dual-wallpaper-engine
+/usr/share/dual-wallpaper-engine/app.py
+/usr/bin/dual-wallpaper-engine-gui
+/usr/share/applications/com.github.dualwallpaperengine.desktop
