@@ -30,7 +30,8 @@ The easiest way to install Dual Wallpaper Engine is by using the provided `.deb`
 
 If you prefer to build the application yourself, ensure you have CMake and a C++17 compiler installed. 
 
-Dependencies: `g++`, `cmake`, `python3`, `python3-gi`, `gir1.2-adw-1`, `libadwaita-1-0`, `x11-xserver-utils` (for `xrandr`).
+Dependencies: `g++`, `cmake`, `python3`, `python3-gi`, `gir1.2-adw-1`, `libadwaita-1-0`, 
+`x11-xserver-utils` (for `xrandr`).
 
 ```bash
 # Clone the repository
