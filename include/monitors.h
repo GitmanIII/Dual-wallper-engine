@@ -10,5 +10,7 @@ struct Monitor {
     int y;
 };
 
-// Runs `xrandr` and parses the active monitors and their layout geometries.
+// Detects the display server at runtime (Wayland vs X11).
+// On Wayland uses the GDK display API (via GTK3).
+// On X11 (fallback) runs `xrandr` and parses active monitors.
 std::vector<Monitor> get_active_monitors();
