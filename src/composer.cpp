@@ -42,6 +42,7 @@ std::string compose_wallpapers(const std::vector<Monitor>& monitors, const std::
     int channels = 3;
     std::vector<unsigned char> master_buffer(master_w * master_h * channels, 0); // Black background
     
+    int loaded_count = 0;
     for (size_t i = 0; i < monitors.size(); i++) {
         const auto& m = monitors[i];
         std::string img_path = wallpaper_paths[i % wallpaper_paths.size()]; // Loop images if fewer than monitors
@@ -53,6 +54,8 @@ std::string compose_wallpapers(const std::vector<Monitor>& monitors, const std::
             std::cerr << "Failed to load image: " << img_path << std::endl;
             continue;
         }
+        
+        loaded_count++;
         
         // Calculate aspect-fill scale
         float scale_w = (float)m.width / img_w;
@@ -89,6 +92,10 @@ std::string compose_wallpapers(const std::vector<Monitor>& monitors, const std::
         std::cout << "Blitted " << img_path << " to monitor " << m.name << " at " << m.x << "," << m.y << std::endl;
     }
     
+    if (loaded_count == 0) {
+        throw std::runtime_error("No wallpapers could be loaded. Cannot create composite background.");
+    }
+
     std::string out_path = get_cache_dir() + "/background.jpg";
     if (!stbi_write_jpg(out_path.c_str(), master_w, master_h, channels, master_buffer.data(), 90)) {
         throw std::runtime_error("Failed to write composite background image!");
